@@ -1,0 +1,33 @@
+---
+import ContactSection from '../components/ContactSection.astro';
+import CompliancePathway from '../components/CompliancePathway.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Partnership from '../components/Partnership.astro';
+import Services from '../components/Services.astro';
+import SiteScripts from '../components/SiteScripts.astro';
+import TrackRecord from '../components/TrackRecord.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import WhyNuvanta from '../components/WhyNuvanta.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Nuvanta Energy · Grid Code Compliance & Simulation for Utility-Scale Renewables';
+const description = 'Nuvanta Energy leads grid code compliance and simulation for utility-scale solar and hybrid projects in India, in collaboration with IIT Ropar. CEA & SLDC approvals, PSS®E and PSCAD simulation, real-time control integration.';
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <main>
+    <Hero />
+    <TrustStrip />
+    <Services />
+    <CompliancePathway />
+    <Partnership />
+    <TrackRecord />
+    <WhyNuvanta />
+    <ContactSection />
+  </main>
+  <Footer />
+  <SiteScripts />
+</BaseLayout>
