@@ -37,7 +37,7 @@ The function adds rows in this order: timestamp, name, organisation, email, phon
 1. Push this folder to a GitHub repository.
 2. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
 3. Push to `main`. The included `.github/workflows/deploy.yml` builds and deploys the website automatically.
-4. This repository deploys as a project site at `https://nuvanta-energy.github.io/nuvantaenergy.github.io/`.
+4. Name the repository `Nuvanta-Energy.github.io` to deploy the organization site at `https://nuvanta-energy.github.io/`.
 
 GitHub Pages only hosts static files. It cannot run `netlify/functions/contact.mjs`, so the contact form needs a separately hosted API. Set its public URL as the repository variable `PUBLIC_CONTACT_API_URL` under **Settings → Secrets and variables → Actions → Variables**. The deployed API—not GitHub Pages—must keep the Google and Telegram secrets.
 
