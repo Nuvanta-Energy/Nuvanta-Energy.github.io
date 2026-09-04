@@ -1,5 +1,10 @@
 <script>
-  // mobile nav toggle
+  const progressBar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = `${window.scrollY / docHeight * 100}%`;
+  }, { passive: true });
+
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   navToggle.addEventListener('click', () => {
@@ -11,17 +16,41 @@
     navToggle.setAttribute('aria-expanded', 'false');
   }));
 
-  // scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => io.observe(el));
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  function animateCounter(el, target) {
+    let current = 0;
+    const step = target / 40;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        el.textContent = `${target}+`;
+        clearInterval(timer);
+        return;
+      }
+      el.textContent = `${Math.floor(current)}+`;
+    }, 30);
+  }
+
+  const counterEls = document.querySelectorAll('[data-target]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target, Number(entry.target.dataset.target));
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counterEls.forEach(el => counterObserver.observe(el));
 
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('formSubmitBtn');
@@ -32,7 +61,6 @@
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // loading state
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
     successMsg.style.display = 'none';
@@ -62,7 +90,7 @@
       errorMsg.style.display = 'block';
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Request a consultation';
+      submitBtn.textContent = 'Request a consultation →';
     }
   });
 </script>
