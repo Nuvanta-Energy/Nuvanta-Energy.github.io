@@ -5,3 +5,8 @@ dist/
 .env.*
 !.env.example
 .netlify/
+.swarmlog/
+.swarm/
+.swarm.yaml
+.swarm.yaml.lock
+.swarm.lock

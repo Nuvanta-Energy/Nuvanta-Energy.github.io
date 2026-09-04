@@ -1,75 +1,82 @@
 <section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="hero-bg-glow2"></div>
+  </div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow">Grid Code Compliance &amp; Simulation</div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>Grid Code Compliance &amp; Simulation · India</span>
+        </div>
         <h1>Getting renewable &amp; hybrid plants from <em>interconnection study</em> to <em>commissioned</em>, without the back-and-forth.</h1>
-        <p class="lede">We lead grid code compliance and simulation for utility-scale solar and hybrid projects across India, in academic collaboration with IIT Ropar — covering CEA &amp; SLDC approvals, PSS®E/PSCAD modelling, and real-time control integration for storage-backed renewables.</p>
+        <p class="lede">We lead grid code compliance and simulation for utility-scale solar and hybrid projects across India, in academic collaboration with IIT Ropar: CEA &amp; SLDC approvals, PSS®E/PSCAD modelling, and real-time control integration for storage-backed renewables.</p>
         <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Request a consultation</a>
+          <a href="#contact" class="btn btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Request a consultation
+          </a>
           <a href="#process" class="btn btn-secondary">See the compliance pathway</a>
         </div>
         <div class="hero-stats">
-          <div class="hero-stat"><div class="num">18+</div><div class="lbl">Utility-scale projects</div></div>
-          <div class="hero-stat"><div class="num">100%</div><div class="lbl">CEA/SLDC approval rate</div></div>
-          <div class="hero-stat"><div class="num">IIT</div><div class="lbl">Ropar collaboration</div></div>
+          <div class="hero-stat">
+            <div class="num" data-target="18">0</div>
+            <div class="lbl">Utility-scale projects</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">100%</div>
+            <div class="lbl">CEA/SLDC approval rate</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">IIT</div>
+            <div class="lbl">Ropar collaboration</div>
+          </div>
         </div>
       </div>
 
       <div class="sld-box">
-        <div class="sld-label"><span>SINGLE LINE — INTERCONNECTION</span><span class="sld-status">● COMPLIANT</span></div>
+        <div class="sld-header">
+          <span class="sld-title">Single Line — Interconnection</span>
+          <div class="sld-pill"><span class="sld-pill-dot"></span>Compliant</div>
+        </div>
         <div class="sld-svg-frame">
-          <svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 10 460 225" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
             <style>
-              .sld-stroke{stroke:#3D5A73;stroke-width:1.6;fill:none;}
-              .sld-fill{fill:#FFFFFF;stroke:#3D5A73;stroke-width:1.6;}
-              .sld-label-txt{font-family:'IBM Plex Mono',monospace;font-size:9px;fill:#5B6B7A;}
-              .sld-green{stroke:#1C7C54;}
+              .ss{stroke:#3D5A73;stroke-width:1.6;fill:none;}
+              .sf{fill:#fff;stroke:#3D5A73;stroke-width:1.6;}
+              .lt{font-family:'IBM Plex Mono',monospace;font-size:9px;fill:#5B6B7A;}
+              .sg{stroke:#1C7C54;stroke-width:2;}
+              .fg{fill:#E3F2EC;stroke:#1C7C54;stroke-width:1.8;}
             </style>
-            <!-- generator -->
-            <circle cx="45" cy="110" r="22" class="sld-fill"/>
-            <text x="45" y="113" text-anchor="middle" class="sld-label-txt" font-size="11" fill="#0B2540">G</text>
-            <text x="45" y="148" text-anchor="middle" class="sld-label-txt">PV ARRAY</text>
-
-            <!-- line to transformer -->
-            <line x1="67" y1="110" x2="120" y2="110" class="sld-stroke"/>
-
-            <!-- transformer -->
-            <circle cx="138" cy="110" r="16" class="sld-fill"/>
-            <circle cx="160" cy="110" r="16" class="sld-fill"/>
-            <text x="149" y="142" text-anchor="middle" class="sld-label-txt">STEP-UP XFMR</text>
-
-            <!-- line to breaker -->
-            <line x1="176" y1="110" x2="225" y2="110" class="sld-stroke"/>
-
-            <!-- breaker (compliance gate) -->
-            <rect x="225" y="95" width="30" height="30" rx="3" class="sld-fill sld-green"/>
-            <line x1="232" y1="118" x2="248" y2="102" class="sld-stroke sld-green"/>
-            <text x="240" y="142" text-anchor="middle" class="sld-label-txt" fill="#1C7C54">CEA / SLDC GATE</text>
-
-            <!-- line to grid -->
-            <line x1="255" y1="110" x2="310" y2="110" class="sld-stroke"/>
-
-            <!-- grid bus -->
-            <line x1="310" y1="70" x2="310" y2="150" class="sld-stroke" stroke-width="3"/>
-            <line x1="310" y1="110" x2="345" y2="110" class="sld-stroke"/>
-            <text x="327" y="60" text-anchor="middle" class="sld-label-txt">GRID BUS</text>
-
-            <!-- BESS branch -->
-            <line x1="160" y1="126" x2="160" y2="170" class="sld-stroke" stroke-dasharray="3,3"/>
-            <rect x="142" y="170" width="36" height="20" rx="2" class="sld-fill"/>
-            <text x="160" y="184" text-anchor="middle" class="sld-label-txt" font-size="8" fill="#0B2540">BESS</text>
-
-            <!-- protection relay marker -->
-            <rect x="280" y="98" width="22" height="22" rx="2" class="sld-fill"/>
-            <text x="291" y="112" text-anchor="middle" class="sld-label-txt" font-size="8" fill="#0B2540">87</text>
-            <text x="291" y="198" text-anchor="middle" class="sld-label-txt" font-size="8">PROTECTION</text>
-
-            <!-- RTU/SCADA tap -->
-            <line x1="345" y1="110" x2="395" y2="110" class="sld-stroke"/>
-            <rect x="395" y="98" width="40" height="24" rx="2" class="sld-fill"/>
-            <text x="415" y="113" text-anchor="middle" class="sld-label-txt" font-size="8" fill="#0B2540">RTU</text>
-            <text x="415" y="142" text-anchor="middle" class="sld-label-txt">SCADA / AGC</text>
+            <circle cx="44" cy="112" r="22" class="sf"/>
+            <text x="44" y="116" text-anchor="middle" class="lt" font-size="12" fill="#0B2540" font-weight="600">G</text>
+            <text x="44" y="150" text-anchor="middle" class="lt">PV ARRAY</text>
+            <line x1="66" y1="112" x2="118" y2="112" class="ss"/>
+            <circle cx="134" cy="112" r="16" class="sf"/>
+            <circle cx="156" cy="112" r="16" class="sf"/>
+            <text x="145" y="145" text-anchor="middle" class="lt">STEP-UP XFMR</text>
+            <line x1="156" y1="128" x2="156" y2="175" class="ss" stroke-dasharray="4,3"/>
+            <rect x="136" y="175" width="40" height="22" rx="3" class="fg"/>
+            <text x="156" y="190" text-anchor="middle" class="lt" font-size="8.5" fill="#1C7C54" font-weight="500">BESS</text>
+            <line x1="172" y1="112" x2="220" y2="112" class="ss"/>
+            <rect x="220" y="96" width="34" height="32" rx="4" class="fg" filter="url(#glow)"/>
+            <line x1="227" y1="120" x2="247" y2="100" class="ss sg"/>
+            <text x="237" y="145" text-anchor="middle" class="lt" fill="#1C7C54" font-weight="500">CEA/SLDC</text>
+            <line x1="254" y1="112" x2="290" y2="112" class="ss"/>
+            <rect x="279" y="100" width="24" height="24" rx="3" class="sf"/>
+            <text x="291" y="115" text-anchor="middle" class="lt" font-size="8" fill="#0B2540" font-weight="600">87</text>
+            <line x1="303" y1="112" x2="344" y2="112" class="ss"/>
+            <line x1="344" y1="72" x2="344" y2="158" class="ss" stroke-width="3.5"/>
+            <text x="344" y="60" text-anchor="middle" class="lt">GRID BUS</text>
+            <line x1="344" y1="112" x2="390" y2="112" class="ss"/>
+            <rect x="390" y="99" width="48" height="26" rx="4" class="sf"/>
+            <text x="414" y="115" text-anchor="middle" class="lt" font-size="8" fill="#0B2540" font-weight="500">RTU/SCADA</text>
+            <text x="414" y="145" text-anchor="middle" class="lt">AGC / AVR</text>
           </svg>
         </div>
         <div class="sld-caption">Every interconnection we model carries protection coordination, ramp-rate, and AGC/AVR set-points through to the <b>SLDC approval file</b> — not just the load flow case.</div>
